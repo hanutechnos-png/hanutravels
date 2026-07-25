@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://hanutravels.in/sitemap.xml
-
-# AI-readable site summary: https://hanutravels.in/llms.txt

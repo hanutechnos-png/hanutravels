@@ -1,0 +1,10 @@
+.vs/
+*.zip
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
+node_modules/
+build/
+.tmp-*/
+blogs/

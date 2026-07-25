@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from hanutravels.in/taxi/j/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Oct 2024 15:07:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d80f2" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<script src="../../assets/js/static-export-fixes.js?v=20260726-seo-a11y"></script>
+    <title>Taxi Fare Estimator - Hanu Travels</title>
+	<meta name="twitter:image" content="https://hanutravels.in/wp-content/uploads/2022/12/2019_Ford_Fusion_Hybrid_White_Exterior_Front_Picture-removebg-preview.png" />
+	<meta property="og:type" content="website" />
+		<link rel="canonical" href="https://hanutravels.in/taxi/j/" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:description" content="Estimate Hanu Travels taxi fare for one-way and round-trip cab bookings, then send the trip details through WhatsApp for confirmation." />
+		<meta name="twitter:title" content="Taxi Fare Estimator - Hanu Travels" />
+		<meta property="og:image" content="https://hanutravels.in/wp-content/uploads/2022/12/2019_Ford_Fusion_Hybrid_White_Exterior_Front_Picture-removebg-preview.png" />
+		<meta property="og:site_name" content="Hanu Travels" />
+		<meta property="og:url" content="https://hanutravels.in/taxi/j/" />
+		<meta property="og:description" content="Estimate Hanu Travels taxi fare for one-way and round-trip cab bookings, then send the trip details through WhatsApp for confirmation." />
+		<meta property="og:title" content="Taxi Fare Estimator - Hanu Travels" />
+		<meta name="description" content="Estimate Hanu Travels taxi fare for one-way and round-trip cab bookings, then send the trip details through WhatsApp for confirmation." />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../../assets/css/site-overrides.css?v=20260726-seo-a11y">
+    <style>
+	.hidden{
+  display: none;
+}
+.b2{
+    padding-top: 16px;
+}
+.panel-login {
+	border-color: #ccc;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.panel-login>.panel-heading {
+	color: #00415d;
+	background-color: #fff;
+	border-color: #fff;
+	text-align:center;
+}
+.panel-login>.panel-heading a{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login>.panel-heading a.active{
+	color: #029f5b;
+	font-size: 18px;
+}
+.panel-login>.panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+}
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"],.panel-login input[type="tel"],.panel-login input[type="number"] {
+	height: 45px;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login input:hover,
+.panel-login input:focus {
+	outline:none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #ccc;
+}
+.btn-login {
+	background-color: #59B2E0;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #59B2E6;
+}
+.btn-login:hover,
+.btn-login:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+.forgot-password {
+	text-decoration: underline;
+	color: #888;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+	text-decoration: underline;
+	color: #666;
+}
+
+.btn-register {
+	background-color: #1CB94E;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #1CB94A;
+}
+.btn-register:hover,
+.btn-register:focus {
+	color: #fff;
+	background-color: #1CA347;
+	border-color: #1CA347;
+}
+
+
+</style>
+    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  <link rel="alternate" type="text/plain" href="https://hanutravels.in/llms.txt" title="Hanu Travels AI-readable summary" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+</head>
+
+<body>
+  <a class="hanu-skip-link" href="#hanu-main-content">Skip to main content</a>
+  <h1 class="seo-h1">Hanu Travels Taxi Fare Estimator</h1>
+
+<div class="container b2" style="background-color:#d7e9fc;">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="panel panel-login">
+				<div class="panel-heading">
+					<div class="row eael-tabs-nav">
+						<div class="col-xs-6 active" id="ab">
+							<a href="#" class="active" id="login-form-link">Quick Booking</a>
+						</div>
+					</div>
+					<hr>
+				</div>
+				<div class="panel-body">
+					<div class="row  d-flex justify-contant-center">
+						<div class="col-xs-12 form_wrapper ng-star-inserted">
+							<form id="login-form" name="oneway" action="#" method="post" role="form" style="display: block;">
+	<h4 class="text-center">Get instant fare estimate in a few seconds.</h4>
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-6 col-xs-6">
+				<label for="">Full Name</label>
+				<input type="text" name="name" placeholder="Full Name" required class="form-control ng-untouched ng-pristine ng-invalid">
+			</div>
+			<div class="col-md-6 col-xs-6">
+				<label for="">Mobile Number</label>
+				<input type="tel" name="phone" id="mobile-num" placeholder="Mobile Number" required="" maxlength="10" class="form-control ng-untouched ng-pristine ng-invalid">
+				<span id="mobile-valid" class="hidden mob">Valid Mobile No</span>
+				<span id="folio-invalid" class="hidden mob-helpers"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-6 col-xs-6">
+				<label for="">Pickup Date</label>
+				<input type="text" placeholder="dd-mm-yyyy" name="pickupdate" tabindex="2" id="datepicker" required class="form-control">
+			</div>
+			<div class="col-md-6 col-xs-6">
+				<label for="">Pickup Time</label>
+				<input type="time" name="pickuptime" tabindex="2" required class="form-control">
+			</div>
+		</div>
+	</div>
+
+	<style>
+		[type=text], [type=email], [type=number], [type=time], select {
+			color: black !important;
+		}
+		.calc-grid {
+			
+			
+			
+			margin-top: 8px;
+		}
+		.cars-item {
+			text-align: left;
+			border: 1px solid #e3e3e3;
+			border-radius: 8px;
+			padding: 10px;
+			background: #fff;
+			min-height: 116px; margin-bottom: 12px;
+		}
+		.cars-item input[type=radio] {
+			margin-right: 6px;
+		}
+		.car-thumb {
+			width: 120px;
+			height: 60px;
+			object-fit: contain;
+			display: block;
+			margin: 6px 0;
+		}
+		.rate {
+			font-weight: 700;
+			margin-bottom: 4px;
+		}
+		.result-card {
+			margin-top: 14px;
+			padding: 12px;
+			border: 1px solid #d9e2ef;
+			border-radius: 8px;
+			background: #f7fbff;
+		}
+		.result-title {
+			font-size: 16px;
+			font-weight: 700;
+			margin-bottom: 8px;
+		}
+		.result-row {
+			
+			justify-content: space-between;
+			margin-bottom: 4px;
+		}
+		.result-row span {
+			display: inline-block;
+			min-width: 138px;
+		}
+		.result-total {
+			margin-top: 8px;
+			padding-top: 8px;
+			border-top: 1px dashed #b7c9de;
+			font-weight: 700;
+			font-size: 18px;
+		}
+		.fare-note {
+			font-size: 12px;
+			color: #666;
+			margin-top: 6px;
+			line-height: 1.45;
+		}
+		.rule-box {
+			margin-top: 8px;
+			padding: 10px;
+			border-left: 3px solid #029f5b;
+			background: #f7fbff;
+			font-size: 12px;
+			color: #444;
+		}
+	</style>
+
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-6 col-xs-6">
+				<label for="trip-type">Trip Type</label>
+				<select id="trip-type" name="triptype" class="form-control" required>
+					<option value="oneway">One Way</option>
+					<option value="roundtrip">Round Trip</option>
+				</select>
+			</div>
+			<div class="col-md-6 col-xs-6">
+				<label for="distance-km">Distance (in KM)</label>
+				<input type="number" id="distance-km" name="distancekm" min="1" step="1" placeholder="Enter total distance" class="form-control" required>
+			</div>
+		</div>
+	</div>
+	<div class="form-group hidden" id="trip-days-wrap">
+		<label for="trip-days">Round Trip Days</label>
+		<input type="number" id="trip-days" name="tripdays" min="1" step="1" value="1" class="form-control">
+	</div>
+	<div class="rule-box">
+		One Way minimum: 130 KM. Round Trip minimum: 250 KM per day. Toll, parking, permit, hill station, waiting and driver allowance charges are extra.
+	</div>
+
+	<div class="form-group">
+		<label>Select Vehicle</label>
+		<div class="row carbox calc-grid">
+			<div class="col-md-4 col-sm-6 col-xs-6 cars-item">
+				<div class="rate">Rs 12 / KM</div>
+				<label><input type="radio" name="rate" value="12" data-car="Hatchback" required> Hatchback</label>
+				<img loading="lazy" decoding="async" width="600" height="280" src="../../wp-content/uploads/2022/12/hatchback-optimized.webp" class="car-thumb" alt="Hatchback">
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6 cars-item">
+				<div class="rate">Rs 14 / KM</div>
+				<label><input type="radio" name="rate" value="14" data-car="Sedan" required> Sedan</label>
+				<img loading="lazy" decoding="async" width="600" height="280" src="../../wp-content/uploads/2022/12/sedan-optimized.webp" class="car-thumb" alt="Sedan">
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6 cars-item">
+				<div class="rate">Rs 15 / KM</div>
+				<label><input type="radio" name="rate" value="15" data-car="Etios" required> Etios</label>
+				<img loading="lazy" decoding="async" width="600" height="280" src="../../wp-content/uploads/2022/12/sedan-etios-optimized.webp" class="car-thumb" alt="Etios">
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6 cars-item">
+				<div class="rate">Rs 19 / KM</div>
+				<label><input type="radio" name="rate" value="19" data-car="SUV" required> SUV</label>
+				<img loading="lazy" decoding="async" width="600" height="280" src="../../wp-content/uploads/2022/12/suv-optimized.webp" class="car-thumb" alt="SUV">
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6 cars-item">
+				<div class="rate">Rs 20 / KM</div>
+				<label><input type="radio" name="rate" value="20" data-car="Innova" required> Innova</label>
+				<img loading="lazy" decoding="async" width="600" height="280" src="../../wp-content/uploads/2022/12/suv-innova-optimized.webp" class="car-thumb" alt="Innova">
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6 cars-item">
+				<div class="rate">Rs 24 / KM</div>
+				<label><input type="radio" name="rate" value="24" data-car="Traveller" required> Traveller</label>
+				<img loading="lazy" decoding="async" width="600" height="280" src="../../wp-content/uploads/2022/12/traveller-optimized.webp" class="car-thumb" alt="Traveller">
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="row">
+			<div class="col-sm-12 col-sm-offset-0">
+				<input _ngcontent-eug-c131="" type="submit" name="submit" id="one" value="Calculate Estimate" class="button btn btn-primary">
+			</div>
+		</div>
+		<div id="estimate-result" class="result-card hidden">
+			<div class="result-title">Fare Estimate</div>
+			<div class="result-row"><span>Vehicle</span><strong id="res-car">-</strong></div>
+			<div class="result-row"><span>Rate</span><strong id="res-rate">-</strong></div>
+			<div class="result-row"><span>Trip</span><strong id="res-trip">-</strong></div>
+			<div class="result-row"><span>Entered Distance</span><strong id="res-distance">-</strong></div>
+			<div class="result-row"><span>Billable Distance</span><strong id="res-billable-distance">-</strong></div>
+			<div class="result-row"><span>Minimum Rule</span><strong id="res-min-rule">-</strong></div>
+			<div class="result-row result-total"><span>Estimated Fare</span><strong id="res-total">-</strong></div>
+			<div class="fare-note">Approximate base fare only. Toll, parking, permit, hill station, waiting and driver allowance charges are extra.</div>
+			<a id="whatsapp-enquiry" class="btn btn-success btn-block" style="margin-top:12px;" href="https://wa.me/919976555520" target="_blank" rel="noopener">Send WhatsApp Enquiry</a>
+		</div>
+	</div>
+</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$( "#datepicker" ).datepicker({ minDate: 0,dateFormat: "dd-mm-yy"});
+	$( "#datepicker1" ).datepicker({ minDate: 0,dateFormat: "dd-mm-yy"});
+	$( "#datepicker2" ).datepicker({ minDate: 0,dateFormat: "dd-mm-yy"});
+</script>
+
+<script>
+	$(document).ready(function(){
+  
+  $("#mobile-num").on("blur", function(){
+        var mobNum = $(this).val();
+        var filter = /^\d*(?:\.\d{1,2})?$/;
+
+          if (filter.test(mobNum)) {
+            if(mobNum.length==10){                
+              $("#mobile-valid").removeClass("hidden");
+              $("#folio-invalid").addClass("hidden");
+             } else {
+               
+               $("#folio-invalid").removeClass("hidden");
+               $("#mobile-valid").addClass("hidden");
+			   $("#mobile-num").val('');
+                return false;
+              }
+            }
+            else {
+              
+              $("#folio-invalid").removeClass("hidden");
+              $("#mobile-valid").addClass("hidden");
+			  $("#mobile-num").val('');
+              return false;
+           }
+    
+  });
+
+  $("#mobile-num1").on("blur", function(){
+        var mobNum = $(this).val();
+        var filter = /^\d*(?:\.\d{1,2})?$/;
+
+          if (filter.test(mobNum)) {
+            if(mobNum.length==10){                
+              $("#mobile-valid1").removeClass("hidden");
+              $("#folio-invalid1").addClass("hidden");
+             } else {
+               
+               $("#folio-invalid1").removeClass("hidden");
+               $("#mobile-valid1").addClass("hidden");
+			   $("#mobile-num1").val('');
+                return false;
+              }
+            }
+            else {
+              
+              $("#folio-invalid1").removeClass("hidden");
+              $("#mobile-valid1").addClass("hidden");
+			  $("#mobile-num1").val('');
+              return false;
+           }
+    
+  });
+
+  $("#email").on("blur", function(){
+        var mobNum = $(this).val();
+        var filter = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})+$/;
+
+          if (filter.test(mobNum)) {
+                          
+              $("#email-valid").removeClass("hidden");
+              $("#email-invalid").addClass("hidden");
+           
+            }
+            else {
+              
+              $("#email-invalid").removeClass("hidden");
+              $("#email-valid").addClass("hidden");
+			  $("#email").val('');
+              return false;
+           }
+    
+  });
+
+  $("#email1").on("blur", function(){
+        var mobNum = $(this).val();
+        var filter = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})+$/;
+
+          if (filter.test(mobNum)) {
+                        
+              $("#email-valid1").removeClass("hidden");
+              $("#email-invalid1").addClass("hidden");
+            
+            }
+            else {
+              
+              $("#email-invalid1").removeClass("hidden");
+              $("#email-valid1").addClass("hidden");
+			  $("#email1").val('');
+              return false;
+           }
+    
+  });
+  
+});
+</script>
+
+
+<script>
+	$(document).ready(function () {
+		var minimumKm = {
+			oneway: 130,
+			roundtrip: 250
+		};
+
+		$("#trip-type").on("change", function () {
+			if ($(this).val() === "roundtrip") {
+				$("#trip-days-wrap").removeClass("hidden");
+				$("#distance-km").attr("placeholder", "Enter total round trip distance");
+			} else {
+				$("#trip-days-wrap").addClass("hidden");
+				$("#trip-days").val("1");
+				$("#distance-km").attr("placeholder", "Enter one way distance");
+			}
+		}).trigger("change");
+
+		$("#login-form").on("submit", function (e) {
+			e.preventDefault();
+
+			var distance = parseFloat($("#distance-km").val() || "0");
+			var tripType = $("#trip-type").val();
+			var tripDays = parseInt($("#trip-days").val() || "1", 10);
+			var selectedRate = $("input[name='rate']:checked");
+			var rate = parseFloat(selectedRate.val() || "0");
+			var car = selectedRate.data("car") || "-";
+			var name = $.trim($("input[name='name']").val());
+			var phone = $.trim($("input[name='phone']").val());
+			var pickupDate = $.trim($("input[name='pickupdate']").val());
+			var pickupTime = $.trim($("input[name='pickuptime']").val());
+
+			if (!distance || distance <= 0 || !rate) {
+				return;
+			}
+
+			if (!tripDays || tripDays < 1) {
+				tripDays = 1;
+			}
+
+			var tripLabel = tripType === "roundtrip" ? "Round Trip" : "One Way";
+			var minimumDistance = tripType === "roundtrip" ? (minimumKm.roundtrip * tripDays) : minimumKm.oneway;
+			var billedDistance = Math.max(distance, minimumDistance);
+			var minimumRule = tripType === "roundtrip" ? ("250 KM x " + tripDays + " day(s)") : "130 KM";
+			var total = Math.round(billedDistance * rate);
+
+			$("#res-car").text(car);
+			$("#res-rate").text("Rs " + rate + " / KM");
+			$("#res-trip").text(tripType === "roundtrip" ? (tripLabel + " - " + tripDays + " day(s)") : tripLabel);
+			$("#res-distance").text(distance + " KM");
+			$("#res-billable-distance").text(billedDistance + " KM");
+			$("#res-min-rule").text(minimumRule);
+			$("#res-total").text("Rs " + total);
+			var message = [
+				"Hi Hanu Travels, I want to book a cab.",
+				"Name: " + name,
+				"Phone: " + phone,
+				"Pickup Date: " + pickupDate,
+				"Pickup Time: " + pickupTime,
+				"Trip Type: " + (tripType === "roundtrip" ? (tripLabel + " - " + tripDays + " day(s)") : tripLabel),
+				"Vehicle: " + car,
+				"Entered Distance: " + distance + " KM",
+				"Billable Distance: " + billedDistance + " KM",
+				"Minimum Rule: " + minimumRule,
+				"Estimated Base Fare: Rs " + total,
+				"Note: Toll, parking, permit, hill station, waiting and driver allowance charges are extra."
+			].join("\n");
+			$("#whatsapp-enquiry").attr("href", "https://wa.me/919976555520?text=" + encodeURIComponent(message));
+			$("#estimate-result").removeClass("hidden");
+		});
+	});
+</script>
+  <!-- jquery js -->
+  <!-- bootstrap js -->
+  <!-- nice select js -->
+  <!-- datepicker js -->
+  <!-- smooth scroll js -->
+  <!-- isotope js -->
+  <!-- mapbox js -->
+  <!-- fancybox js -->
+  <!-- swiper js -->
+  <!-- sticky js -->
+  <!-- kinsley js -->
+</body>
+
+<!-- Mirrored from hanutravels.in/taxi/j/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Oct 2024 15:07:55 GMT -->
+</html>
+
+
+
+

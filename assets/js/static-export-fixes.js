@@ -107,5 +107,44 @@
         return;
       }
     });
+
+    document.querySelectorAll(".hfe-nav-menu__toggle").forEach(function (toggle) {
+      var wrapper = toggle.closest(".hfe-nav-menu");
+      var nav = wrapper ? wrapper.querySelector("nav") : null;
+
+      if (!wrapper || !nav || toggle.__hanuMenuReady) {
+        return;
+      }
+
+      toggle.__hanuMenuReady = true;
+      toggle.setAttribute("role", "button");
+      toggle.setAttribute("tabindex", "0");
+      toggle.setAttribute("aria-label", "Menu");
+      toggle.setAttribute("aria-expanded", "false");
+
+      function setOpen(isOpen) {
+        wrapper.classList.toggle("hanu-mobile-menu-open", isOpen);
+        nav.classList.toggle("hanu-mobile-menu-open", isOpen);
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      }
+
+      toggle.addEventListener("click", function (event) {
+        event.preventDefault();
+        setOpen(!wrapper.classList.contains("hanu-mobile-menu-open"));
+      });
+
+      toggle.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          setOpen(!wrapper.classList.contains("hanu-mobile-menu-open"));
+        }
+      });
+
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          setOpen(false);
+        });
+      });
+    });
   });
 })();

@@ -3227,3 +3227,74 @@ footer .elementor-element-36c926d a:focus {
     transition: none !important;
   }
 }
+
+@media (max-width: 921px) {
+  .hfe-nav-menu.hanu-mobile-menu-open {
+    position: relative;
+  }
+
+  .hfe-nav-menu .hfe-nav-menu__toggle {
+    cursor: pointer;
+  }
+
+  .hfe-nav-menu nav.hanu-mobile-menu-open,
+  .hfe-nav-menu.hanu-mobile-menu-open nav.hfe-nav-menu__layout-horizontal {
+    position: absolute !important;
+    top: calc(100% + 10px) !important;
+    right: 0 !important;
+    left: auto !important;
+    z-index: 9999 !important;
+    display: block !important;
+    width: min(280px, calc(100vw - 32px)) !important;
+    height: auto !important;
+    max-height: calc(100vh - 180px) !important;
+    overflow-y: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16) !important;
+    padding: 8px 0 !important;
+  }
+
+  .hfe-nav-menu.hanu-mobile-menu-open nav .hfe-nav-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .hfe-nav-menu.hanu-mobile-menu-open nav .menu-item {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .hfe-nav-menu.hanu-mobile-menu-open nav .hfe-menu-item {
+    display: block !important;
+    width: 100% !important;
+    padding: 12px 18px !important;
+    color: #010000 !important;
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+    white-space: normal !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .hfe-nav-menu.hanu-mobile-menu-open nav .hfe-menu-item[aria-current="page"],
+  .hfe-nav-menu.hanu-mobile-menu-open nav .hfe-menu-item:hover,
+  .hfe-nav-menu.hanu-mobile-menu-open nav .hfe-menu-item:focus {
+    color: #1085f5 !important;
+    background: rgba(16, 133, 245, 0.08) !important;
+  }
+}

@@ -108,6 +108,59 @@
       }
     });
 
+    var revealTargets = document.querySelectorAll([
+      ".hanu-about-reveal",
+      ".hanu-about-section-title",
+      ".hanu-about-card",
+      ".hanu-service-quote",
+      ".hanu-service-mini-card",
+      ".hanu-tariff-note",
+      ".hanu-faq-reveal",
+      ".hanu-faq-item",
+      ".hanu-terms-reveal",
+      ".hanu-contact-reveal",
+      ".hanu-contact-card",
+      ".hanu-contact-form-panel",
+      ".hanu-contact-support",
+      ".hanu-quote-reveal",
+      ".hanu-quote-panel",
+      ".hanu-quote-side",
+      ".hanu-quote-estimator",
+      ".hanu-testimonial-reveal",
+      ".hanu-testimonial-card",
+      ".hanu-home-service-card",
+      ".hanu-package-reveal",
+      ".hanu-package-card",
+      ".elementor-1333 .elementor-element-9db8aa9",
+      ".elementor-1333 .elementor-element-4200574",
+      ".elementor-1333 .elementor-element-00fcb89",
+      ".elementor-1333 .elementor-element-e5927c3"
+    ].join(","));
+
+    if ("IntersectionObserver" in window) {
+      var revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("hanu-is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, {
+        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.12
+      });
+
+      revealTargets.forEach(function (target) {
+        revealObserver.observe(target);
+      });
+    } else {
+      revealTargets.forEach(function (target) {
+        target.classList.add("hanu-is-visible");
+      });
+    }
+
     document.querySelectorAll(".hfe-nav-menu__toggle").forEach(function (toggle) {
       var wrapper = toggle.closest(".hfe-nav-menu");
       var nav = wrapper ? wrapper.querySelector("nav") : null;

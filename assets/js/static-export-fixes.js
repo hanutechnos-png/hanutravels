@@ -132,6 +132,9 @@
       ".hanu-package-reveal",
       ".hanu-package-card",
       ".elementor-1333 .elementor-element-9db8aa9",
+      ".elementor-1333 .elementor-element-b2b6ae9",
+      ".elementor-1333 .elementor-element-38e0ae2",
+      ".elementor-1333 .elementor-element-6b27b9a",
       ".elementor-1333 .elementor-element-4200574",
       ".elementor-1333 .elementor-element-00fcb89",
       ".elementor-1333 .elementor-element-e5927c3"
@@ -158,6 +161,18 @@
     } else {
       revealTargets.forEach(function (target) {
         target.classList.add("hanu-is-visible");
+      });
+    }
+
+    if (document.querySelector(".elementor-1333")) {
+      window.requestAnimationFrame(function () {
+        document.querySelectorAll([
+          ".elementor-1333 .elementor-element-b2b6ae9",
+          ".elementor-1333 .elementor-element-38e0ae2",
+          ".elementor-1333 .elementor-element-6b27b9a"
+        ].join(",")).forEach(function (target) {
+          target.classList.add("hanu-is-visible");
+        });
       });
     }
 

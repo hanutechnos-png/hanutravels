@@ -2288,8 +2288,33 @@ footer .elementor-element-36c926d a:focus {
     overflow-x: hidden;
   }
 
-  .elementor-1333 .elementor-element.elementor-element-dc2d60c {
+  .elementor-1333 .elementor-element.elementor-element-dc2d60c,
+  .elementor-1333 .elementor-element.elementor-element-dc2d60c:not(.elementor-motion-effects-element-type-background) {
     padding-top: 4px;
+    background-image: url("/wp-content/uploads/2022/12/hero-section.png") !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+
+  .elementor-1333 .elementor-element.elementor-element-dc2d60c::after {
+    content: "";
+    display: block;
+    width: min(92vw, 360px);
+    height: clamp(190px, 62vw, 280px);
+    margin: 10px auto 0;
+    background-image: url("/wp-content/uploads/2026/home-page-transparent-optimized.webp");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+  }
+
+  .elementor-1333 .elementor-element.elementor-element-dc2d60c > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-image: url("/wp-content/uploads/2022/12/hero-section.png") !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
   }
 
   .elementor-1333 .elementor-element.elementor-element-7fc6fbe .elementor-spacer-inner {

@@ -132,6 +132,8 @@
       ".hanu-package-reveal",
       ".hanu-package-card",
       ".elementor-1333 .elementor-element-9db8aa9",
+      ".elementor-1333 .elementor-element-cbeda0f",
+      ".elementor-1333 .elementor-element-e37c3db",
       ".elementor-1333 .elementor-element-b2b6ae9",
       ".elementor-1333 .elementor-element-38e0ae2",
       ".elementor-1333 .elementor-element-6b27b9a",

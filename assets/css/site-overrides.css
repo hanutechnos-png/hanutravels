@@ -1576,6 +1576,18 @@ footer .elementor-element-36c926d a:focus {
   }
 }
 
+@keyframes hanuHomeSlideInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @keyframes hanuHomeFloat {
   0%,
   100% {
@@ -1585,6 +1597,30 @@ footer .elementor-element-36c926d a:focus {
   50% {
     transform: translateY(-8px);
   }
+}
+
+.elementor-1333 .elementor-element.elementor-element-cbeda0f,
+.elementor-1333 .elementor-element.elementor-element-e37c3db {
+  opacity: 0 !important;
+  visibility: visible !important;
+}
+
+.elementor-1333 .elementor-element.elementor-element-cbeda0f {
+  transform: translate3d(-48px, 0, 0);
+}
+
+.elementor-1333 .elementor-element.elementor-element-e37c3db {
+  transform: translate3d(48px, 0, 0);
+}
+
+.elementor-1333 .elementor-element.elementor-element-cbeda0f.hanu-is-visible {
+  opacity: 1 !important;
+  animation: hanuHomeSlideIn 0.82s ease both;
+}
+
+.elementor-1333 .elementor-element.elementor-element-e37c3db.hanu-is-visible {
+  opacity: 1 !important;
+  animation: hanuHomeSlideInRight 0.82s ease both;
 }
 
 .elementor-1333 .elementor-element.elementor-element-7fc6fbe .elementor-spacer-inner {
@@ -3410,6 +3446,8 @@ footer .elementor-element-36c926d a:focus {
   .hanu-package-reveal,
   .hanu-package-card,
   .elementor-1333 .elementor-element-9db8aa9,
+  .elementor-1333 .elementor-element-cbeda0f,
+  .elementor-1333 .elementor-element-e37c3db,
   .elementor-1333 .elementor-element-b2b6ae9,
   .elementor-1333 .elementor-element-38e0ae2,
   .elementor-1333 .elementor-element-6b27b9a,
